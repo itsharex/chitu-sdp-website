@@ -4,7 +4,7 @@
     <div class="header-container flex">
       <div class="left">
         <div class="logo">
-          <img src="/image/logo.png"
+          <img src="/chitu-sdp-website/image/logo.png"
                alt="赤兔实时计算平台">
         </div>
       </div>
@@ -51,7 +51,7 @@
           <div class="item flex-center"
                v-for="(item,key) in bannerList"
                :key="key">
-            <img src="/image/check.png"
+            <img src="/chitu-sdp-website/image/check.png"
                  alt="">
             {{item.name}}
           </div>
@@ -71,13 +71,13 @@
             <div class="main-content-text text-indent">事件驱动应用是对一系列订阅事件进行处理或作出响应的系统。事件驱动应用通常需要依赖内部状态，例如欺诈检测、风控系统、运维异常检测系统等。当用户行为触发某些风险控制点时，系统会捕获这个事件，并根据用户当前和之前的行为进行分析，决定是否对用户进行风险控制。</div>
           </div>
           <div class="flex-1">
-            <img src="/image/img_sjqdyy.png"
+            <img src="/chitu-sdp-website/image/img_sjqdyy.png"
                  alt="">
           </div>
         </div>
         <div class="application-content flex">
           <div class="flex-1">
-            <img src="/image/img_sssjfx.png"
+            <img src="/chitu-sdp-website/image/img_sssjfx.png"
                  alt="">
           </div>
           <div class="flex-1 pd-60">
@@ -91,7 +91,7 @@
             <div class="main-content-text text-indent">ETL 是将业务系统的数据经过抽取、清洗转换之后加载到目的端的过程，目的是将企业中的分散、零乱、标准不统一的数据整合到一起，为企业的决策提供分析依据。</div>
           </div>
           <div class="flex-1">
-            <img src="/image/img_ssetl.png"
+            <img src="/chitu-sdp-website/image/img_ssetl.png"
                  alt="">
           </div>
         </div>
@@ -102,31 +102,31 @@
         <div class="feature-content flex-center">
           <div class="left">
             <div class="content">
-              <img src="/image/icon_qtgyzs.png"
+              <img src="/chitu-sdp-website/image/icon_qtgyzs.png"
                    alt="">
               <div class="main-content-title text-r">全托管一站式</div>
               <div class="main-content-text ">提供 Flink SQL/JAR 任务开发、上线、运维、监控一体化 开箱即用，免运维</div>
             </div>
             <div class="content">
-              <img src="/image/icon_dhj.png"
+              <img src="/chitu-sdp-website/image/icon_dhj.png"
                    alt="">
               <div class="main-content-title text-r">多环境</div>
               <div class="main-content-text text-r">支持测试/生产环境切换及转环境，多维度进行资源环境的隔离</div>
             </div>
           </div>
           <div class="center">
-            <img src="/image/img_ldpt.png"
+            <img src="/chitu-sdp-website/image/img_ldpt.png"
                  alt="">
           </div>
           <div class="right">
             <div class="content">
-              <img src="/image/icon_yys.png"
+              <img src="/chitu-sdp-website/image/icon_yys.png"
                    alt="">
               <div class="main-content-title">云原生</div>
               <div class="main-content-text">资源调度支持 K8S，资源弹性化，数据云上化</div>
             </div>
             <div class="content">
-              <img src="/image/icon_yyx.png"
+              <img src="/chitu-sdp-website/image/icon_yyx.png"
                    alt="">
               <div class="main-content-title">易用性</div>
               <div class="main-content-text">Flink 元表自动生成、支持 Flink 多版本、自定义配置监控告警规则等</div>
@@ -139,7 +139,7 @@
         <div class="main-title">功 能</div>
         <div class="function-content flex">
           <div class="item">
-            <img src="/image/img_tgsql.png"
+            <img src="/chitu-sdp-website/image/img_tgsql.png"
                  alt="">
             <div>
               <div class="main-content-title">通过SQL或代码开发实时任务</div>
@@ -147,7 +147,7 @@
             </div>
           </div>
           <div class="item">
-            <img src="/image/img_wsdrwfb.png"
+            <img src="/chitu-sdp-website/image/img_wsdrwfb.png"
                  alt="">
             <div>
               <div class="main-content-title">完善的任务发布流程</div>
@@ -155,7 +155,7 @@
             </div>
           </div>
           <div class="item">
-            <img src="/image/img_qddywjk.png"
+            <img src="/chitu-sdp-website/image/img_qddywjk.png"
                  alt="">
             <div>
               <div class="main-content-title">强大的运维监控告警支持</div>
@@ -163,7 +163,7 @@
             </div>
           </div>
           <div class="item">
-            <img src="/image/img_tgqyjgnzc.png"
+            <img src="/chitu-sdp-website/image/img_tgqyjgnzc.png"
                  alt="">
             <div>
               <div class="main-content-title">提供企业级功能支持</div>
@@ -178,7 +178,7 @@
       <div class="footer-content">
         <div class="content-title">
           <div class="item">
-            <img src="/image/footer-logo.png"
+            <img src="/chitu-sdp-website/image/footer-logo.png"
                  alt=""
                  style="width:100%">
           </div>
@@ -206,13 +206,13 @@
             <div class="text qrcode-list flex">
               <div class="mr-16">
                 <img class="icon-qrcode"
-                     src="/image/gzh.png"
+                     src="/chitu-sdp-website/image/gzh.png"
                      alt="" />
                 <div>用户群</div>
               </div>
               <div>
                 <img class="icon-qrcode"
-                     src="/image/gzh.png"
+                     src="/chitu-sdp-website/image/gzh.png"
                      alt="" />
                 <div>公众号</div>
               </div>
@@ -232,7 +232,7 @@
             <div class="qrcode-wrap"
                  slot="content">
               <img class="icon-qrcode"
-                   src="/image/gzh.png"
+                   src="/chitu-sdp-website/image/gzh.png"
                    alt="" />
             </div>
             <div class="qrcode-content">
@@ -258,7 +258,7 @@
             <div class="qrcode-wrap"
                  slot="content">
               <img class="icon-qrcode"
-                   src="/image/gzh.png"
+                   src="/chitu-sdp-website/image/gzh.png"
                    alt="" />
             </div>
             <div class="qrcode-content">
@@ -338,7 +338,7 @@
         dplayerOpt: {
           video: {
             url: "https://bg-uat-cos-bdp-1257092428.cos.ap-guangzhou.myqcloud.com/bigdata/wordpress/2023/03/20230315071216480.mp4",
-            pic: "/image/player-pic.png"//视频封面图
+            pic: "/chitu-sdp-website/image/player-pic.png"//视频封面图
           },
         },
       }
@@ -433,7 +433,7 @@
     width: 100%;
     min-height: 100vh;
     margin: 0 auto;
-    background-image: url("/image/home-bg.png");
+    background-image: url("/chitu-sdp-website/image/home-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
