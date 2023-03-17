@@ -17,11 +17,11 @@ git add .
 git commit -m 'deploy'
 
 # 如果发布到 https://<USERNAME>.github.io
-# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
+# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 git remote add origin git@github.com:galaxy-data-cn/chitu-sdp-website.git
-git branch -M main
-git push -f git@github.com:galaxy-data-cn/chitu-sdp-website.git main:gh-pages
+git branch -M master
+git push -f git@github.com:galaxy-data-cn/chitu-sdp-website.git master:gh-pages
 
 cd -
