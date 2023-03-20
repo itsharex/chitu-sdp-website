@@ -383,7 +383,7 @@
         }
       },
       toSDP () {
-        window.open('https://183.57.45.188/')
+        window.open('http://183.57.45.188/')
       },
       toGitHub () {
         window.open('https://github.com/galaxy-data-cn/chitu-sdp')
