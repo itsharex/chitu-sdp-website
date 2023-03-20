@@ -29,8 +29,8 @@
       <div class="introduce-container flex">
         <div class="left flex-1">
           <div class="title">赤兔实时计算平台</div>
-          <div class="info mb-20">
-            基于 Apache Flink 构建的企业级、一站式、高性能、低门槛实时大数据计算平台，广泛适用于流式数据开发应用场景
+          <div class="info">
+            基于Apache Flink构建的企业级、一站式、高性能、低门槛实时大数据实时计算平台，广泛适用于流式数据开发应用场景。
           </div>
           <div class="btns flex">
             <div class="btn btn-left pointer"
@@ -68,34 +68,46 @@
         <div class="application-content flex">
           <div class="flex-1 pd-60">
             <div class="main-content-title text-r">事件驱动应用</div>
+            <img class="phone-img"
+                 src="/chitu-sdp-website/image/img_sjqdyy.png"
+                 alt="">
             <div class="main-content-text text-indent">事件驱动应用是对一系列订阅事件进行处理或作出响应的系统。事件驱动应用通常需要依赖内部状态，例如欺诈检测、风控系统、运维异常检测系统等。当用户行为触发某些风险控制点时，系统会捕获这个事件，并根据用户当前和之前的行为进行分析，决定是否对用户进行风险控制。</div>
           </div>
           <div class="flex-1">
-            <img src="/chitu-sdp-website/image/img_sjqdyy.png"
+            <img class="pc-img"
+                 src="/chitu-sdp-website/image/img_sjqdyy.png"
                  alt="">
           </div>
         </div>
         <div class="application-content flex">
           <div class="flex-1">
-            <img src="/chitu-sdp-website/image/img_sssjfx.png"
+            <img class="pc-img"
+                 src="/chitu-sdp-website/image/img_sssjfx.png"
                  alt="">
           </div>
           <div class="flex-1 pd-60">
             <div class="main-content-title">实时数据分析</div>
+            <img class="phone-img"
+                 src="/chitu-sdp-website/image/img_sssjfx.png"
+                 alt="">
             <div class="main-content-text text-indent">传统数据仓库解决方案基于离线批量采集及分析，无法做到实时的数据分析功能。流式查询或应用会接入实时事件流，随着事件消费持续产生和更新结果。这些结果数据可能会写入外部数据库系统或以内部状态的形式维护。仪表展示应用可以相应地从外部数据库读取数据或直接查询应用的内部状态。</div>
           </div>
         </div>
         <div class="application-content flex">
           <div class="flex-1 pd-60">
             <div class="main-content-title text-r">实时ETL</div>
+            <img class="phone-img"
+                 src="/chitu-sdp-website/image/img_ssetl.png"
+                 alt="">
             <div class="main-content-text text-indent">ETL 是将业务系统的数据经过抽取、清洗转换之后加载到目的端的过程，目的是将企业中的分散、零乱、标准不统一的数据整合到一起，为企业的决策提供分析依据。</div>
           </div>
           <div class="flex-1">
-            <img src="/chitu-sdp-website/image/img_ssetl.png"
+            <img class="pc-img"
+                 src="/chitu-sdp-website/image/img_ssetl.png"
                  alt="">
           </div>
         </div>
-      </div>bounceInUp
+      </div>
       <div class="feature-container wow bounceInUp"
            data-wow-duration="1.5s">
         <div class="main-title">亮 点</div>
@@ -182,21 +194,21 @@
                  alt=""
                  style="width:100%">
           </div>
-          <div class="item">Resource</div>
-          <div class="item">更多</div>
-          <div class="item">关注</div>
+          <div class="item pc-item">Resource</div>
+          <div class="item pc-item">更多</div>
+          <div class="item pc-item">关注</div>
         </div>
         <div class="content-item">
-          <div class="item">
+          <div class="item pc-item">
             <div></div>
           </div>
-          <div class="item">
+          <div class="item pc-item">
             <div class="text pointer active-hover"
                  @click="toDoc">文档</div>
             <div class="text pointer active-hover"
                  @click="toFAQ">FAQ</div>
           </div>
-          <div class="item">
+          <div class="item pc-item">
             <div class="text pointer active-hover"
                  @click="toGitHub">Github</div>
             <div class="text pointer active-hover"
@@ -206,9 +218,9 @@
             <div class="text qrcode-list flex">
               <div class="mr-16">
                 <img class="icon-qrcode"
-                     src="/chitu-sdp-website/image/gzh.png"
+                     src="/chitu-sdp-website/image/zx.jpg"
                      alt="" />
-                <div>用户群</div>
+                <div>咨询</div>
               </div>
               <div>
                 <img class="icon-qrcode"
@@ -232,8 +244,9 @@
             <div class="qrcode-wrap"
                  slot="content">
               <img class="icon-qrcode"
-                   src="/chitu-sdp-website/image/gzh.png"
-                   alt="" />
+                   src="/chitu-sdp-website/image/zx.jpg"
+                   alt=""
+                   style="width:100px;" />
             </div>
             <div class="qrcode-content">
               <svg t="1678976239134"
@@ -259,7 +272,8 @@
                  slot="content">
               <img class="icon-qrcode"
                    src="/chitu-sdp-website/image/gzh.png"
-                   alt="" />
+                   alt=""
+                   style="width:100px;" />
             </div>
             <div class="qrcode-content">
               <svg t="1678976116780"
@@ -519,6 +533,7 @@
         }
         .info {
           line-height: 30px;
+          margin-bottom: 40px;
         }
         .btns {
           .btn {
@@ -617,6 +632,9 @@
           margin-top: 100px;
           .pd-60 {
             padding: 0 60px;
+          }
+          .phone-img {
+            display: none;
           }
         }
       }
@@ -755,26 +773,128 @@
       }
     }
   }
-</style>
-<style lang='scss'>
-  .qrcode-popover {
-    padding: 10px !important;
-    margin-right: 20px !important;
-    width: 100px;
-    border: 0 !important;
-    text-align: center;
-    .popper__arrow {
-      border-color: transparent !important;
-    }
-    .qrcode-wrap {
-      .icon-qrcode {
-        display: block;
-        width: 100px;
-        height: 100px;
+  /* 媒体查询（手机） */
+  @media screen and (max-width: 768px),
+    screen and (min-width: 768px) and (max-width: 996px) {
+    .layout-container {
+      .header-container {
+        max-width: 100% !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        display: block !important;
+        box-sizing: border-box;
+        .center {
+          margin-top: 10px;
+          .menu-list {
+            width: 100% !important;
+            margin-left: 0 !important;
+            justify-content: space-around;
+          }
+        }
+        .right {
+          display: none;
+        }
       }
-    }
-    .qrcode-content {
-      color: #303133;
+      .main-container {
+        max-width: 100%;
+        margin: 50px auto 0 auto !important;
+        .introduce-container {
+          display: block;
+          text-align: center;
+          padding-left: 10px;
+          padding-right: 10px;
+          .left {
+            .btns {
+              display: block;
+              text-align: center;
+              .btn {
+                margin: 0 auto;
+              }
+              .btn-left {
+                margin-bottom: 20px;
+              }
+            }
+          }
+          .right {
+            margin: 20px auto 0 auto;
+            margin-left: 0px !important;
+            padding: 0 10px;
+          }
+        }
+        .application-container {
+          margin-left: 10px !important;
+          margin-right: 10px !important;
+          padding-left: 10px !important;
+          padding-right: 10px !important;
+          .application-content {
+            display: block !important;
+            margin-top: 30px;
+            .pd-60 {
+              padding: 0 10px;
+            }
+            .pc-img {
+              display: none;
+            }
+            .phone-img {
+              width: 70%;
+              display: block;
+              margin: 0 auto 20px auto;
+            }
+            .main-content-title {
+              text-align: center;
+            }
+          }
+        }
+        .feature-container {
+          .feature-content {
+            display: block;
+            .left,
+            .right {
+              text-align: center;
+              padding-left: 10px !important;
+              padding-right: 10px !important;
+              .main-content-title {
+                text-align: center;
+              }
+              .main-content-text {
+                text-align: center;
+              }
+            }
+            .center {
+              img {
+                display: none;
+              }
+            }
+          }
+        }
+        .function-container {
+          padding-left: 10px !important;
+          padding-right: 10px !important;
+          .function-content {
+            .item {
+              height: auto;
+              padding: 0 20px 10px 20px;
+              margin: 0 auto 70px auto;
+            }
+          }
+        }
+      }
+      .footer-container {
+        max-width: 100%;
+        .footer-content {
+          max-width: 100%;
+          .content-title {
+            .item {
+              img {
+                width: 200px !important;
+              }
+            }
+          }
+          .pc-item {
+            display: none !important;
+          }
+        }
+      }
     }
   }
 </style>
