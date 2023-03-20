@@ -30,7 +30,7 @@
         <div class="left flex-1">
           <div class="title">赤兔实时计算平台</div>
           <div class="info">
-            基于Apache Flink构建的企业级、一站式、高性能、低门槛实时大数据实时计算平台，广泛适用于流式数据开发应用场景。
+            基于Apache Flink构建的企业级、一站式、高性能、低门槛实时大数据实时计算平台，广泛适用于流式数据应用开发场景。
           </div>
           <div class="btns flex">
             <div class="btn btn-left pointer"
