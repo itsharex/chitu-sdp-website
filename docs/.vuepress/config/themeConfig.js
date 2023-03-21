@@ -9,7 +9,7 @@ module.exports = {
   lastUpdated: "上次更新",
 
   // Vdoing Theme Config
-  sidebar: { mode: "structuring", collapsable: false },
+  sidebar: { mode: "structuring", collapsable: true },
 
   updateBar: {
     showToArticle: false
