@@ -146,7 +146,7 @@
           </div>
         </div>
       </div>
-      <div class="function-container wow bounceInUp"
+      <div class="function-phone-container wow bounceInUp"
            data-wow-duration="1.5s">
         <div class="main-title">功 能</div>
         <div class="function-content flex">
@@ -155,23 +155,10 @@
                  alt="">
             <div>
               <div class="main-content-title">通过SQL或代码开发实时任务</div>
+              <img class="main-content-img"
+                   src="/chitu-sdp-website/image/func_banner_1.png"
+                   alt="">
               <div class="main-content-text">强大的 IDE 套件，支持 jar、SQL开发模式，支持拖拽、模块化、多语言等特性，提供多种调试方式，支持任务血缘、版本管理等。</div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="/chitu-sdp-website/image/img_wsdrwfb.png"
-                 alt="">
-            <div>
-              <div class="main-content-title">完善的任务发布流程</div>
-              <div class="main-content-text">提供开发/上线模式，以实现开发/运维隔离，保障开发工作不直接影响线上任务，支持快照版本管理；通过调试功能为开发者模拟低成本开发集群，在不引入额外成本前提下全面保障线上安全。</div>
-            </div>
-          </div>
-          <div class="item">
-            <img src="/chitu-sdp-website/image/img_qddywjk.png"
-                 alt="">
-            <div>
-              <div class="main-content-title">强大的运维监控告警支持</div>
-              <div class="main-content-text">提供任务的全生命周期事件管理，支持任务运行状态各种维度 metrics 的汇总与展示，实现问题快速排查和恢复，保障 SLA。</div>
             </div>
           </div>
           <div class="item">
@@ -179,9 +166,61 @@
                  alt="">
             <div>
               <div class="main-content-title">提供企业级功能支持</div>
+              <img class="main-content-img"
+                   src="/chitu-sdp-website/image/func_banner_2.png"
+                   alt="">
               <div class="main-content-text">提供多环境、多集群、多版本的企业级功能支持。</div>
             </div>
           </div>
+          <div class="item">
+            <img src="/chitu-sdp-website/image/img_qddywjk.png"
+                 alt="">
+            <div>
+              <div class="main-content-title">强大的运维监控告警支持</div>
+              <img class="main-content-img"
+                   src="/chitu-sdp-website/image/func_banner_3.png"
+                   alt="">
+              <div class="main-content-text">提供任务的全生命周期事件管理，支持任务运行状态各种维度 metrics 的汇总与展示，实现问题快速排查和恢复，保障 SLA。</div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="/chitu-sdp-website/image/img_wsdrwfb.png"
+                 alt="">
+            <div>
+              <div class="main-content-title">完善的任务发布流程</div>
+              <img class="main-content-img"
+                   src="/chitu-sdp-website/image/func_banner_4.png"
+                   alt="">
+              <div class="main-content-text">提供开发/上线模式，以实现开发/运维隔离，保障开发工作不直接影响线上任务，支持快照版本管理；通过调试功能为开发者模拟低成本开发集群，在不引入额外成本前提下全面保障线上安全。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="function-pc-container wow bounceInUp"
+           data-wow-duration="1.5s">
+        <div class="main-title">功 能</div>
+        <div class="content-list"
+             v-for="(item,key) in funcContentList"
+             v-show="key == activeBanner"
+             :key="key">
+          <div class="content-list_title">
+            {{item.title}}
+          </div>
+          <div class="content-list_text"
+               v-for="(val,index) in item.desc"
+               :key="index">
+            <span v-html="val.text"></span>
+          </div>
+        </div>
+        <div class="banner-list">
+          <el-carousel height="592px"
+                       @change="carouselChange">
+            <el-carousel-item v-for="(item,key) in funcBannerList"
+                              :key="key">
+              <img :src="item.img"
+                   alt="">
+            </el-carousel-item>
+          </el-carousel>
         </div>
       </div>
     </div>
@@ -336,6 +375,7 @@
       return {
         wow: null,
         activeItem: 'home',
+        activeBanner: 0,
         menuList: [
           { name: '首页', key: 'home', path: '/' },
           { name: '文档', key: 'docs', path: '/pages/69fb10/' },
@@ -355,6 +395,78 @@
             pic: "/chitu-sdp-website/image/player-pic.png"//视频封面图
           },
         },
+        funcContentList: [
+          {
+            title: '通过SQL或代码开发实时任务',
+            desc: [
+              {
+                text: '强大的 IDE 套件，支持 jar、SQL开发模式，'
+              },
+              {
+                text: ' 支持拖拽、模块化、多语言等特性，。'
+              },
+              {
+                text: ' 提供多种调试方式，支持任务血缘、版本管理等。'
+              },
+            ]
+          },
+          {
+            title: '提供企业级功能支持',
+            desc: [
+              {
+                text: '提供多环境、多集群、'
+              },
+              {
+                text: '多版本的企业级功能支持。'
+              },
+              {
+                text: '&ensp;'
+              }
+            ]
+          },
+          {
+            title: '强大的运维监控告警支持',
+            desc: [
+              {
+                text: '提供任务的全生命周期事件管理，'
+              },
+              {
+                text: '支持任务运行状态各种维度 metrics 的汇总与展示，'
+              },
+              {
+                text: '实现问题快速排查和恢复，保障 SLA。'
+              }
+            ]
+          },
+          {
+            title: '完善的任务发布流程',
+            desc: [
+              {
+                text: '提供开发/上线模式，以实现开发/运维隔离，'
+              },
+              {
+                text: '保障开发工作不直接影响线上任务，支持快照版本管理，'
+              },
+              {
+                text: '通过调试功能为开发者模拟低成本开发集群，在不引入额外成本前提下全面保障线上安全。'
+              }
+            ]
+          }
+        ],
+        funcBannerList: [
+          {
+            img: '/chitu-sdp-website/image/func_banner_1.png'
+          },
+          {
+            img: '/chitu-sdp-website/image/func_banner_2.png'
+          },
+          {
+            img: '/chitu-sdp-website/image/func_banner_3.png'
+          },
+          {
+            img: '/chitu-sdp-website/image/func_banner_4.png'
+          }
+        ]
       }
     },
     computed: {},
@@ -393,6 +505,9 @@
       },
       toDoc () {
         this.$router.push('/pages/69fb10/')
+      },
+      carouselChange (val) {
+        this.activeBanner = val
       }
     },
   }
@@ -664,7 +779,8 @@
           }
         }
       }
-      .function-container {
+      .function-phone-container {
+        display: none;
         margin-top: 120px;
         .function-content {
           margin-top: 70px;
@@ -683,6 +799,43 @@
             img {
               margin-top: -50px;
             }
+            .main-content-title {
+              margin-top: -40px;
+              margin-bottom: 10px;
+            }
+            .main-content-img {
+              width: 100%;
+              margin-top: 0;
+            }
+          }
+        }
+      }
+      .function-pc-container {
+        margin-top: 120px;
+        .content-list {
+          .content-list_title {
+            font-size: 24px;
+            font-weight: 700;
+            text-align: left;
+            color: #303133;
+            line-height: 31px;
+            letter-spacing: 2px;
+            text-align: center;
+            margin: 60px 0 24px 0;
+          }
+          .content-list_text {
+            font-size: 16px;
+            font-weight: 400;
+            text-align: center;
+            color: #80879a;
+            line-height: 28px;
+            letter-spacing: 1px;
+          }
+        }
+        .banner-list {
+          text-align: center;
+          img {
+            height: 100%;
           }
         }
       }
@@ -887,7 +1040,8 @@
             }
           }
         }
-        .function-container {
+        .function-phone-container {
+          display: block;
           padding-left: 10px !important;
           padding-right: 10px !important;
           .function-content {
@@ -897,6 +1051,9 @@
               margin: 0 auto 70px auto;
             }
           }
+        }
+        .function-pc-container {
+          display: none;
         }
       }
       .footer-container {

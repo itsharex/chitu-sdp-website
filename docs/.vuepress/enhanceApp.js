@@ -1,4 +1,4 @@
-import { Button, Tooltip, Backtop } from 'element-ui';
+import { Button, Tooltip, Backtop, Carousel, CarouselItem } from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import animated from 'animate.css'
 import 'wowjs/css/libs/animate.css'
@@ -13,6 +13,8 @@ export default async ({
   Vue.use(Button);
   Vue.use(Tooltip);
   Vue.use(Backtop);
+  Vue.use(Carousel);
+  Vue.use(CarouselItem);
   Vue.use(animated)
   if (!isServer) {
     await import('vue-dplayer').then(module => {
