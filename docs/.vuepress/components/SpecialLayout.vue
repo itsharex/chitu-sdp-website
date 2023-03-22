@@ -42,7 +42,7 @@
         <div class="right flex-1">
           <div class="player">
             <d-player :options="dplayerOpt"
-                      style="width: 100%; height: 100%"></d-player>
+                      style="width: 100%; height: 100%;display:block;"></d-player>
           </div>
         </div>
       </div>
