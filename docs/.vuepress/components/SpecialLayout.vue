@@ -39,7 +39,7 @@
                  @click="toGitHub">GitHub</div>
           </div>
         </div>
-        <div class="right flex-1">
+        <div class="right">
           <div class="player">
             <d-player :options="dplayerOpt"
                       style="width: 100%; height: 100%;display:block;"></d-player>
@@ -522,49 +522,58 @@
         letter-spacing: 1px;
       }
       .introduce-container {
-        .right {
-          margin-left: 50px;
-          box-sizing: border-box;
-        }
-        .title {
-          font-size: 40px;
-          line-height: 80px;
-          margin-bottom: 30px;
-        }
-        .info {
-          line-height: 30px;
-          margin-bottom: 40px;
-        }
-        .btns {
-          .btn {
-            width: 160px;
-            height: 56px;
-            line-height: 56px;
-            padding: 0 35px;
+        .left {
+          padding-right: 50px;
+          .title {
+            font-size: 50px;
+            font-weight: 700;
+            line-height: 66px;
+            letter-spacing: 4.63px;
+            margin-bottom: 50px;
+          }
+          .info {
             font-size: 20px;
-            text-align: center;
+            font-weight: 400;
+            color: #a5d4ff;
+            line-height: 36px;
+            letter-spacing: 1px;
+            margin-bottom: 50px;
           }
-          .btn-left {
-            background: linear-gradient(
-              45deg,
-              #008fff,
-              #18ecea 64%,
-              #9fff67 100%
-            );
-            border-radius: 28px;
-            box-shadow: 0px 10px 30px 0px rgba(17, 5, 97, 0.2);
-          }
-          .btn-right {
-            border: 1px solid #70f995;
-            border-radius: 29px;
-            box-shadow: 0px 10px 30px 0px rgba(17, 5, 97, 0.2);
+          .btns {
+            .btn {
+              width: 180px;
+              height: 56px;
+              line-height: 56px;
+              font-size: 20px;
+              text-align: center;
+            }
+            .btn-left {
+              background: linear-gradient(
+                45deg,
+                #008fff,
+                #18ecea 64%,
+                #9fff67 100%
+              );
+              border-radius: 28px;
+              box-shadow: 0px 10px 30px 0px rgba(17, 5, 97, 0.2);
+            }
+            .btn-right {
+              border: 1px solid #70f995;
+              border-radius: 29px;
+              box-shadow: 0px 10px 30px 0px rgba(17, 5, 97, 0.2);
+            }
           }
         }
-        .player {
-          height: 300px;
-          background: #ffffff;
-          border: 5px solid rgba(255, 255, 255, 0.8);
-          border-radius: 6px;
+        .right {
+          width: 600px;
+          height: 340px;
+          box-sizing: border-box;
+          .player {
+            height: 100%;
+            background: #ffffff;
+            border: 5px solid rgba(255, 255, 255, 0.8);
+            border-radius: 6px;
+          }
         }
       }
       .banner-container {
@@ -804,11 +813,17 @@
           padding-left: 10px;
           padding-right: 10px;
           .left {
+            padding: 0;
+            .title {
+              font-size: 40px;
+              letter-spacing: normal;
+            }
             .btns {
               display: block;
               text-align: center;
               .btn {
                 margin: 0 auto;
+                padding: 0 35px;
               }
               .btn-left {
                 margin-bottom: 20px;
@@ -816,9 +831,14 @@
             }
           }
           .right {
+            width: 100%;
             margin: 20px auto 0 auto;
             margin-left: 0px !important;
             padding: 0 10px;
+            .player {
+              height: 100%;
+              width: 100%;
+            }
           }
         }
         .application-container {
