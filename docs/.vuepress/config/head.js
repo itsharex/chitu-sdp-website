@@ -8,6 +8,9 @@ module.exports = [
   var appKey = 'r336dqylqlyt6aqotj8u0771';
 var logUrl = 'kye-log-sdk.ky-express.com';
 var jsUrl = 'https://bg-prd-cos-bdp-1257092428.cos.ap-guangzhou.myqcloud.com/bigdata/kyelog/aplus_web_v9_md5_c1f7.js';
+if(window.location.host.indexOf('localhost') >= 0) {
+  return
+}
 (function (w, d, s, q) {
 w[q] = w[q] || [];
 var f = d.getElementsByTagName(s)[0], j = d.createElement(s);
