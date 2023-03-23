@@ -2,15 +2,15 @@
   <div class="layout-container">
     <!-- 头部 -->
     <div class="header-container flex">
-      <div class="left">
-        <div class="logo">
+      <div class="header-container__left">
+        <div class="header-container__left-logo">
           <img src="/chitu-sdp-website/image/logo.png"
                alt="赤兔实时计算平台">
         </div>
       </div>
-      <div class="center flex-1">
+      <div class="header-container__center flex-1">
         <ul class="menu-list flex-between">
-          <li class="menu-item"
+          <li class="menu-list__item"
               :class="{ active: activeItem === item.key }"
               v-for="(item,key) in menuList"
               :key="key"
@@ -19,7 +19,7 @@
           </li>
         </ul>
       </div>
-      <div class="right">
+      <div class="header-container__right">
         <div class="btn"
              @click="toSDP">体验Demo</div>
       </div>
@@ -27,19 +27,19 @@
     <!-- 主体内容 -->
     <div class="main-container">
       <div class="introduce-container flex">
-        <div class="left flex-1">
+        <div class="introduce-container__left flex-1">
           <div class="title">赤兔实时计算平台</div>
           <div class="info">
             基于Apache Flink构建的企业级、一站式、高性能、低门槛实时大数据实时计算平台，广泛适用于流式数据应用开发场景。
           </div>
           <div class="btns flex">
-            <div class="btn btn-left pointer"
+            <div class="btns__btn btn--left pointer"
                  @click="toSDP">体验Demo</div>
-            <div class="btn btn-right pointer ml-20"
+            <div class="btns__btn btn--right pointer ml-20"
                  @click="toGitHub">GitHub</div>
           </div>
         </div>
-        <div class="right">
+        <div class="introduce-container__right">
           <div class="player">
             <d-player :options="dplayerOpt"
                       style="width: 100%; height: 100%;display:block;"></d-player>
@@ -48,7 +48,7 @@
       </div>
       <div class="banner-container">
         <div class="banner-list flex">
-          <div class="item flex-center"
+          <div class="banner-list__item flex-center"
                v-for="(item,key) in bannerList"
                :key="key">
             <img src="/chitu-sdp-website/image/check.png"
@@ -57,52 +57,52 @@
           </div>
         </div>
         <div class="mask-warp">
-          <div class="before"></div>
-          <div class="mask-content"></div>
-          <div class="after"></div>
+          <div class="mask-warp__before"></div>
+          <div class="mask-warp__mask-content"></div>
+          <div class="mask-warp__after"></div>
         </div>
       </div>
       <div class="application-container wow bounceInUp"
            data-wow-duration="1.5s">
-        <div class="main-title">热门应用场景</div>
+        <div class="common-article__title">热门应用场景</div>
         <div class="application-content flex">
           <div class="flex-1 pd-60">
-            <div class="main-content-title text-r">事件驱动应用</div>
-            <img class="phone-img"
+            <div class="common-content__title text-r">事件驱动应用</div>
+            <img class="application-content__phone-img"
                  src="/chitu-sdp-website/image/img_sjqdyy.png"
                  alt="">
-            <div class="main-content-text text-indent">事件驱动应用是对一系列订阅事件进行处理或作出响应的系统。事件驱动应用通常需要依赖内部状态，例如欺诈检测、风控系统、运维异常检测系统等。当用户行为触发某些风险控制点时，系统会捕获这个事件，并根据用户当前和之前的行为进行分析，决定是否对用户进行风险控制。</div>
+            <div class="common-content__text text-indent">事件驱动应用是对一系列订阅事件进行处理或作出响应的系统。事件驱动应用通常需要依赖内部状态，例如欺诈检测、风控系统、运维异常检测系统等。当用户行为触发某些风险控制点时，系统会捕获这个事件，并根据用户当前和之前的行为进行分析，决定是否对用户进行风险控制。</div>
           </div>
           <div class="flex-1">
-            <img class="pc-img"
+            <img class="application-content__pc-img"
                  src="/chitu-sdp-website/image/img_sjqdyy.png"
                  alt="">
           </div>
         </div>
         <div class="application-content flex">
           <div class="flex-1">
-            <img class="pc-img"
+            <img class="application-content__pc-img"
                  src="/chitu-sdp-website/image/img_sssjfx.png"
                  alt="">
           </div>
           <div class="flex-1 pd-60">
-            <div class="main-content-title">实时数据分析</div>
-            <img class="phone-img"
+            <div class="common-content__title">实时数据分析</div>
+            <img class="application-content__phone-img"
                  src="/chitu-sdp-website/image/img_sssjfx.png"
                  alt="">
-            <div class="main-content-text text-indent">传统数据仓库解决方案基于离线批量采集及分析，无法做到实时的数据分析功能。流式查询或应用会接入实时事件流，随着事件消费持续产生和更新结果。这些结果数据可能会写入外部数据库系统或以内部状态的形式维护。仪表展示应用可以相应地从外部数据库读取数据或直接查询应用的内部状态。</div>
+            <div class="common-content__text text-indent">传统数据仓库解决方案基于离线批量采集及分析，无法做到实时的数据分析功能。流式查询或应用会接入实时事件流，随着事件消费持续产生和更新结果。这些结果数据可能会写入外部数据库系统或以内部状态的形式维护。仪表展示应用可以相应地从外部数据库读取数据或直接查询应用的内部状态。</div>
           </div>
         </div>
         <div class="application-content flex">
           <div class="flex-1 pd-60">
-            <div class="main-content-title text-r">实时ETL</div>
-            <img class="phone-img"
+            <div class="common-content__title text-r">实时ETL</div>
+            <img class="application-content__phone-img"
                  src="/chitu-sdp-website/image/img_ssetl.png"
                  alt="">
-            <div class="main-content-text text-indent">ETL 是将业务系统的数据经过抽取、清洗转换之后加载到目的端的过程，目的是将企业中的分散、零乱、标准不统一的数据整合到一起，为企业的决策提供分析依据。</div>
+            <div class="common-content__text text-indent">ETL 是将业务系统的数据经过抽取、清洗转换之后加载到目的端的过程，目的是将企业中的分散、零乱、标准不统一的数据整合到一起，为企业的决策提供分析依据。</div>
           </div>
           <div class="flex-1">
-            <img class="pc-img"
+            <img class="application-content__pc-img"
                  src="/chitu-sdp-website/image/img_ssetl.png"
                  alt="">
           </div>
@@ -110,95 +110,95 @@
       </div>
       <div class="feature-container wow bounceInUp"
            data-wow-duration="1.5s">
-        <div class="main-title">亮 点</div>
+        <div class="common-article__title">亮 点</div>
         <div class="feature-content flex-center">
-          <div class="left">
-            <div class="content">
+          <div class="feature-content__left">
+            <div class="feature-content__left-content">
               <img src="/chitu-sdp-website/image/icon_qtgyzs.png"
                    alt="">
-              <div class="main-content-title text-r">全托管一站式</div>
-              <div class="main-content-text ">提供 Flink SQL/JAR 任务开发、上线、运维、监控一体化 开箱即用，免运维</div>
+              <div class="common-content__title text-r">全托管一站式</div>
+              <div class="common-content__text ">提供 Flink SQL/JAR 任务开发、上线、运维、监控一体化 开箱即用，免运维</div>
             </div>
-            <div class="content">
+            <div class="feature-content__left-content">
               <img src="/chitu-sdp-website/image/icon_dhj.png"
                    alt="">
-              <div class="main-content-title text-r">多环境</div>
-              <div class="main-content-text text-r">支持测试/生产环境切换及转环境，多维度进行资源环境的隔离</div>
+              <div class="common-content__title text-r">多环境</div>
+              <div class="common-content__text text-r">支持测试/生产环境切换及转环境，多维度进行资源环境的隔离</div>
             </div>
           </div>
-          <div class="center">
+          <div class="feature-content__center">
             <img src="/chitu-sdp-website/image/img_ldpt.png"
                  alt="">
           </div>
-          <div class="right">
-            <div class="content">
+          <div class="feature-content__right">
+            <div class="feature-content__right-content">
               <img src="/chitu-sdp-website/image/icon_yys.png"
                    alt="">
-              <div class="main-content-title">云原生</div>
-              <div class="main-content-text">资源调度支持 K8S，资源弹性化，数据云上化</div>
+              <div class="common-content__title">云原生</div>
+              <div class="common-content__text">资源调度支持 K8S，资源弹性化，数据云上化</div>
             </div>
             <div class="content">
               <img src="/chitu-sdp-website/image/icon_yyx.png"
                    alt="">
-              <div class="main-content-title">易用性</div>
-              <div class="main-content-text">Flink 元表自动生成、支持 Flink 多版本、自定义配置监控告警规则等</div>
+              <div class="common-content__title">易用性</div>
+              <div class="common-content__text">Flink 元表自动生成、支持 Flink 多版本、自定义配置监控告警规则等</div>
             </div>
           </div>
         </div>
       </div>
       <div class="function-phone-container wow bounceInUp"
            data-wow-duration="1.5s">
-        <div class="main-title">功 能</div>
+        <div class="common-article__title">功 能</div>
         <div class="function-content flex">
-          <div class="item">
+          <div class="function-content__item">
             <img src="/chitu-sdp-website/image/img_tgsql.png"
                  alt="">
             <div>
-              <div class="main-content-title">通过SQL或代码开发实时任务</div>
-              <img class="main-content-img"
+              <div class="common-content__title">通过SQL或代码开发实时任务</div>
+              <img class="function-content__item-img"
                    src="/chitu-sdp-website/image/func_banner_1.png"
                    alt="">
-              <div class="main-content-text">强大的 IDE 套件，支持 jar、SQL开发模式，支持拖拽、模块化、多语言等特性，提供多种调试方式，支持任务血缘、版本管理等。</div>
+              <div class="common-content__text">强大的 IDE 套件，支持 jar、SQL开发模式，支持拖拽、模块化、多语言等特性，提供多种调试方式，支持任务血缘、版本管理等。</div>
             </div>
           </div>
-          <div class="item">
+          <div class="function-content__item">
             <img src="/chitu-sdp-website/image/img_tgqyjgnzc.png"
                  alt="">
             <div>
-              <div class="main-content-title">提供企业级功能支持</div>
-              <img class="main-content-img"
+              <div class="common-content__title">提供企业级功能支持</div>
+              <img class="function-content__item-img"
                    src="/chitu-sdp-website/image/func_banner_2.png"
                    alt="">
-              <div class="main-content-text">提供多环境、多集群、多版本的企业级功能支持。</div>
+              <div class="common-content__text">提供多环境、多集群、多版本的企业级功能支持。</div>
             </div>
           </div>
-          <div class="item">
+          <div class="function-content__item">
             <img src="/chitu-sdp-website/image/img_qddywjk.png"
                  alt="">
             <div>
-              <div class="main-content-title">强大的运维监控告警支持</div>
-              <img class="main-content-img"
+              <div class="common-content__title">强大的运维监控告警支持</div>
+              <img class="function-content__item-img"
                    src="/chitu-sdp-website/image/func_banner_3.png"
                    alt="">
-              <div class="main-content-text">提供任务的全生命周期事件管理，支持任务运行状态各种维度 metrics 的汇总与展示，实现问题快速排查和恢复，保障 SLA。</div>
+              <div class="common-content__text">提供任务的全生命周期事件管理，支持任务运行状态各种维度 metrics 的汇总与展示，实现问题快速排查和恢复，保障 SLA。</div>
             </div>
           </div>
-          <div class="item">
+          <div class="function-content__item">
             <img src="/chitu-sdp-website/image/img_wsdrwfb.png"
                  alt="">
             <div>
-              <div class="main-content-title">完善的任务发布流程</div>
-              <img class="main-content-img"
+              <div class="common-content__title">完善的任务发布流程</div>
+              <img class="function-content__item-img"
                    src="/chitu-sdp-website/image/func_banner_4.png"
                    alt="">
-              <div class="main-content-text">提供开发/上线模式，以实现开发/运维隔离，保障开发工作不直接影响线上任务，支持快照版本管理；通过调试功能为开发者模拟低成本开发集群，在不引入额外成本前提下全面保障线上安全。</div>
+              <div class="common-content__text">提供开发/上线模式，以实现开发/运维隔离，保障开发工作不直接影响线上任务，支持快照版本管理；通过调试功能为开发者模拟低成本开发集群，在不引入额外成本前提下全面保障线上安全。</div>
             </div>
           </div>
         </div>
       </div>
       <div class="function-pc-container wow bounceInUp"
            data-wow-duration="1.5s">
-        <div class="main-title">功 能</div>
+        <div class="common-article__title">功 能</div>
         <div class="content-list"
              v-for="(item,key) in funcContentList"
              v-show="key == activeBanner"
@@ -571,11 +571,11 @@
       padding: 20px 0;
       margin: 0 auto;
       align-items: flex-end;
-      .center {
+      &__center {
         .menu-list {
           width: 400px;
           margin-left: 88px;
-          .menu-item {
+          &__item {
             opacity: 0.6;
             font-size: 16px;
             cursor: pointer;
@@ -594,7 +594,7 @@
           }
         }
       }
-      .right {
+      &__right {
         .btn {
           height: 40px;
           width: 140px;
@@ -611,14 +611,14 @@
     .main-container {
       width: 1100px;
       margin: 150px auto 0 auto;
-      .main-title {
+      .common-article__title {
         font-size: 36px;
         font-weight: 700;
         color: #303133;
         line-height: 47px;
         text-align: center;
       }
-      .main-content-title {
+      .common-content__title {
         font-size: 24px;
         font-weight: 400;
         color: #303133;
@@ -629,7 +629,7 @@
           color: #086bff;
         }
       }
-      .main-content-text {
+      .common-content__text {
         font-size: 16px;
         font-weight: 400;
         color: #80879a;
@@ -637,7 +637,7 @@
         letter-spacing: 1px;
       }
       .introduce-container {
-        .left {
+        &__left {
           padding-right: 50px;
           .title {
             font-size: 50px;
@@ -655,14 +655,14 @@
             margin-bottom: 50px;
           }
           .btns {
-            .btn {
+            &__btn {
               width: 180px;
               height: 56px;
               line-height: 56px;
               font-size: 20px;
               text-align: center;
             }
-            .btn-left {
+            .btn--left {
               background: linear-gradient(
                 45deg,
                 #008fff,
@@ -672,14 +672,14 @@
               border-radius: 28px;
               box-shadow: 0px 10px 30px 0px rgba(17, 5, 97, 0.2);
             }
-            .btn-right {
+            .btn--right {
               border: 1px solid #70f995;
               border-radius: 29px;
               box-shadow: 0px 10px 30px 0px rgba(17, 5, 97, 0.2);
             }
           }
         }
-        .right {
+        &__right {
           width: 600px;
           height: 340px;
           box-sizing: border-box;
@@ -697,6 +697,15 @@
         overflow: hidden;
         .banner-list {
           animation: move_safe_iso_ipad 15s linear infinite;
+          &__item {
+            margin-right: 30px;
+            max-width: 360px;
+            min-width: 360px;
+            width: 360px;
+            img {
+              margin-right: 5px;
+            }
+          }
         }
         @keyframes move_safe_iso_ipad {
           to {
@@ -704,15 +713,6 @@
             -moz-transform: translateX(-1100px);
             -o-transform: translateX(-1100px);
             transform: translateX(-1100px);
-          }
-        }
-        .item {
-          margin-right: 30px;
-          max-width: 360px;
-          min-width: 360px;
-          width: 360px;
-          img {
-            margin-right: 5px;
           }
         }
         .mask-warp {
@@ -723,21 +723,21 @@
           left: 0;
           right: 0;
           display: flex;
-          .mask-content {
+          &__mask-content {
             width: 800px;
           }
-          .before,
-          .after {
+          &__before,
+          &__after {
             flex: 1 1;
           }
-          .before {
+          &__before {
             background: linear-gradient(
               90deg,
               #321cc3 19.77%,
               hsla(0, 0%, 100%, 0)
             );
           }
-          .after {
+          &__after {
             background: linear-gradient(
               270deg,
               #321cc3 20.45%,
@@ -754,10 +754,15 @@
         box-shadow: 0px 10px 30px 0px rgba(7, 106, 255, 0.1);
         .application-content {
           margin-top: 100px;
+          &:hover {
+            .common-content__title {
+              color: #0066ff;
+            }
+          }
           .pd-60 {
             padding: 0 60px;
           }
-          .phone-img {
+          &__phone-img {
             display: none;
           }
         }
@@ -766,16 +771,19 @@
         margin-top: 120px;
         .feature-content {
           margin-top: 70px;
-          .left {
+          &__left {
             text-align: right;
             padding-right: 37px;
+            &__content {
+              height: 220px;
+            }
           }
-          .right {
+          &__right {
             text-align: left;
             padding-left: 37px;
-          }
-          .content {
-            height: 220px;
+            &__content {
+              height: 220px;
+            }
           }
         }
       }
@@ -786,7 +794,7 @@
           margin-top: 70px;
           flex-wrap: wrap;
           justify-content: space-between;
-          .item {
+          &__item {
             margin-bottom: 70px;
             width: 526px;
             height: 300px;
@@ -799,13 +807,13 @@
             img {
               margin-top: -50px;
             }
-            .main-content-title {
+            .common-content__title {
               margin-top: -40px;
               margin-bottom: 10px;
             }
-            .main-content-img {
+            &-img {
               width: 100%;
-              margin-top: 0;
+              margin-top: 0 !important;
             }
           }
         }
@@ -945,7 +953,7 @@
         padding-right: 10px !important;
         display: block !important;
         box-sizing: border-box;
-        .center {
+        &__center {
           margin-top: 10px;
           .menu-list {
             width: 100% !important;
@@ -953,7 +961,7 @@
             justify-content: space-around;
           }
         }
-        .right {
+        &__right {
           display: none;
         }
       }
@@ -965,7 +973,7 @@
           text-align: center;
           padding-left: 10px;
           padding-right: 10px;
-          .left {
+          &__left {
             padding: 0;
             .title {
               font-size: 40px;
@@ -974,16 +982,16 @@
             .btns {
               display: block;
               text-align: center;
-              .btn {
+              &__btn {
                 margin: 0 auto;
                 padding: 0 35px;
               }
-              .btn-left {
+              .btn--left {
                 margin-bottom: 20px;
               }
             }
           }
-          .right {
+          &__right {
             width: 100%;
             margin: 20px auto 0 auto;
             margin-left: 0px !important;
@@ -1005,15 +1013,15 @@
             .pd-60 {
               padding: 0 10px;
             }
-            .pc-img {
+            &__pc-img {
               display: none;
             }
-            .phone-img {
+            &__phone-img {
               width: 70%;
               display: block;
               margin: 0 auto 20px auto;
             }
-            .main-content-title {
+            .common-content__title {
               text-align: center;
             }
           }
@@ -1021,19 +1029,19 @@
         .feature-container {
           .feature-content {
             display: block;
-            .left,
-            .right {
+            &__left,
+            &__right {
               text-align: center;
               padding-left: 10px !important;
               padding-right: 10px !important;
-              .main-content-title {
+              .common-content__title {
                 text-align: center;
               }
-              .main-content-text {
+              .common-content__text {
                 text-align: center;
               }
             }
-            .center {
+            &__center {
               img {
                 display: none;
               }
@@ -1045,7 +1053,7 @@
           padding-left: 10px !important;
           padding-right: 10px !important;
           .function-content {
-            .item {
+            &__item {
               height: auto;
               padding: 0 20px 10px 20px;
               margin: 0 auto 70px auto;
