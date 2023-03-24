@@ -257,7 +257,7 @@
             <div class="text qrcode-list flex">
               <div class="mr-16">
                 <img class="icon-qrcode"
-                     src="/chitu-sdp-website/image/zx.jpg"
+                     src="/chitu-sdp-website/image/zx.png"
                      alt="" />
                 <div>咨询</div>
               </div>
@@ -283,7 +283,7 @@
             <div class="qrcode-wrap"
                  slot="content">
               <img class="icon-qrcode"
-                   src="/chitu-sdp-website/image/zx.jpg"
+                   src="/chitu-sdp-website/image/zx.png"
                    alt=""
                    style="width:100px;" />
             </div>
@@ -870,7 +870,10 @@
             color: #61646b;
             line-height: 21px;
             width: 25%;
-            padding-left: 40px;
+            padding: 0 0 10px 40px;
+            img {
+              margin-top: -20px;
+            }
           }
         }
         .content-item {
