@@ -31,7 +31,7 @@
           <div class="introduce-container__left flex-1">
             <div class="title">赤兔实时计算平台</div>
             <div class="info">
-              基于Apache Flink构建的企业级、一站式、高性能、低门槛实时大数据实时计算平台，广泛适用于流式数据应用开发场景。
+              基于 Apache Flink 构建的企业级、一站式、高性能、低门槛大数据实时计算平台，广泛适用于流式数据应用开发场景。
             </div>
             <div class="btns flex">
               <div class="btns__btn btn--left pointer"
@@ -44,6 +44,11 @@
             <div class="player">
               <d-player :options="dplayerOpt"
                         style="width: 100%; height: 100%;display:block;"></d-player>
+              <img class="player-img"
+                   src="/chitu-sdp-website/image/player-pic.png"
+                   alt="">
+              <i class="icon-play"
+                 @click.stop="handlePlayVideo(dplayerOpt.video.url)"></i>
             </div>
           </div>
         </div>
@@ -365,6 +370,20 @@
               p-id="4582"></path>
       </svg>
     </el-backtop>
+    <div class="video-area-container"
+         v-show="isShowVideoArea">
+      <div class="video__mask"
+           @click="handleCloseVideo"></div>
+      <div class="video__wrap">
+        <video ref="video"
+               :src="videoUrl"
+               controls
+               disablePictureInPicture
+               controlsList="nodownload"></video>
+        <i class="icon-close"
+           @click="handleCloseVideo"></i>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -397,6 +416,8 @@
             pic: "/chitu-sdp-website/image/player-pic.png"//视频封面图
           },
         },
+        videoUrl: '',
+        isShowVideoArea: false,
         funcContentList: [
           {
             title: '通过SQL或代码开发实时任务',
@@ -495,6 +516,18 @@
         } else {
           window.open(menu.link)
         }
+      },
+      handlePlayVideo (videoUrl) {
+        this.isShowVideoArea = true
+        let videoDom = this.$refs.video
+        this.videoUrl = videoUrl
+        this.$nextTick(() => {
+          videoDom.play()
+        })
+      },
+      handleCloseVideo () {
+        this.videoUrl = ''
+        this.isShowVideoArea = false
       },
       toSDP () {
         window.open('http://183.57.45.188/')
@@ -689,10 +722,37 @@
           height: 340px;
           box-sizing: border-box;
           .player {
+            position: relative;
             height: 100%;
             background: #ffffff;
             border: 5px solid rgba(255, 255, 255, 0.8);
             border-radius: 6px;
+            .player-img {
+              height: 100%;
+              width: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+            .icon-play {
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              margin: auto;
+              display: inline-block;
+              width: 52px;
+              height: 52px;
+              background: url("/chitu-sdp-website/image/icon-play.png") center
+                center no-repeat;
+              background-size: 100% 100%;
+              cursor: pointer;
+              transition: all 0.4s;
+              &:hover {
+                transform: scale(1.2);
+              }
+            }
           }
         }
       }
@@ -950,6 +1010,74 @@
         }
       }
     }
+    .video-area-container {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9997;
+      .video__mask {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        pointer-events: auto;
+        z-index: 9998;
+      }
+      .video__wrap {
+        position: absolute;
+        width: 1100px;
+        height: 540px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        transition: all 0.3s ease-in;
+        z-index: 9999;
+        video {
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          border: none;
+        }
+        .icon-close {
+          position: absolute;
+          right: 0;
+          top: -50px;
+          width: 50px;
+          height: 50px;
+          cursor: pointer;
+          &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -20px;
+            margin-top: -1px;
+            width: 40px;
+            height: 2px;
+            background-color: #fff;
+            transform: rotate(45deg);
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -20px;
+            margin-top: -1px;
+            width: 40px;
+            height: 2px;
+            background-color: #fff;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
   }
   /* 媒体查询（手机） */
   @media screen and (max-width: 768px),
@@ -1007,6 +1135,12 @@
             .player {
               height: 100%;
               width: 100%;
+              .player-img {
+                display: none;
+              }
+              .icon-play {
+                display: none;
+              }
             }
           }
         }
